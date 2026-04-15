@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Awlad Hossain",
+    "designation": "Senior Product Designer",
+    "message": "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine."
+  },
+  {
+    "id": 2,
+    "name": "Sabbir Rahman",
+    "designation": "Frontend Developer",
+    "message": "Using proper UI components helps maintain consistency and improves user experience across the application."
+  },
+  {
+    "id": 3,
+    "name": "Nusrat Jahan",
+    "designation": "UX Researcher",
+    "message": "User research is essential to understand real user problems and design better solutions."
+  },
+  {
+    "id": 4,
+    "name": "Mahmudul Hasan",
+    "designation": "Backend Developer",
+    "message": "A well-structured API ensures smooth communication between frontend and backend systems."
+  },
+  {
+    "id": 5,
+    "name": "Tanvir Ahmed",
+    "designation": "Full Stack Developer",
+    "message": "Full stack development allows you to build complete applications from frontend to backend."
+  },
+  {
+    "id": 6,
+    "name": "Fariha Islam",
+    "designation": "UI Designer",
+    "message": "Clean and minimal design improves readability and user satisfaction."
+  },
+  {
+    "id": 7,
+    "name": "Rakib Chowdhury",
+    "designation": "Software Engineer",
+    "message": "Writing clean and maintainable code is important for long-term project success."
+  }
+]

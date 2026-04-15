@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co.com/YFsYBrQy/booking-Icon.png",
+    "title": "Booking Pick & Drop",
+    "description": "Learn modern web development using React, Node.js and MongoDB."
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co.com/YFsYBrQy/booking-Icon.png",
+    "title": "Cash On Delivery  ",
+    "description": "Create stunning designs using Photoshop and Illustrator."
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co.com/YFsYBrQy/booking-Icon.png",
+    "title": "Delivery Hub",
+    "description": "Boost your business with SEO and social media marketing."
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co.com/YFsYBrQy/booking-Icon.png",
+    "title": "Booking SME & Corporate",
+    "description": "Build mobile apps using React Native and Flutter."
+  }
+]
