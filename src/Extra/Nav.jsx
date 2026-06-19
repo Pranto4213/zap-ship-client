@@ -59,7 +59,7 @@ const handleLogOut =()=>{
     <NavLink className="btn bg-green-500" to={'/logIn'}>Log In</NavLink>
     </>
    }
-   <Link to={'/'} className='btn btn-primary'>
+   <Link to={'/rider'} className='btn btn-primary'>
    Be a Rider 
    </Link>
     {user?.photo}

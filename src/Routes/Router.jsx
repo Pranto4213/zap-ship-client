@@ -5,6 +5,8 @@ import Resister from "../Authentication/Resister";
 import Login from "../Authentication/Login";
 import Coverage from "../Pages/Coverage";
 import AuthLayout from "../Layout/AuthLayout";
+import PrivetRoute from "./PrivetRoute";
+import Rider from "../Pages/Rider";
 
 
 
@@ -17,6 +19,10 @@ export const router = createBrowserRouter([
         {
             index:true,
             Component:Home
+        },
+        {
+            path:'/rider',
+            element:<PrivetRoute><Rider></Rider></PrivetRoute>
         },{
             path:'/coverage',
             Component:Coverage,

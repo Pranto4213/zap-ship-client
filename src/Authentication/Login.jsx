@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from '../Extra/Logo';
 import { useForm } from 'react-hook-form';
-import { data, Link } from 'react-router';
+import { data, Link, useLocation, useNavigate } from 'react-router';
 import UseAuth from '../Hooks/UseAuth';
 import GoogleSignIn from '../Extra/GoogleSignIn';
 const Login = () => {
@@ -10,10 +10,18 @@ const Login = () => {
     const {signInUser} = UseAuth()
     const {register, handleSubmit} = useForm()
 
+    const location =useLocation()
+    console.log('location', location)
+
+    const navigate = useNavigate()
+
     const handleLogin = (data) => {
         console.log(data)
         signInUser(data.email, data.password)
-        .then(result => console.log(result.user))
+        .then(result => {console.log(result.user)
+      
+        navigate(location?.state || '/')
+      })
         .then(data=> console.log(data))
 
     }
@@ -32,7 +40,7 @@ const Login = () => {
           <div><a class="link link-hover">Forgot password?</a></div>
           <button class="btn btn-neutral mt-4">Login</button>
         </form>
-         <p>Already have an account? <Link className='text-blue-600 underline text-xl' to={'/resister'}> Resister </Link></p>
+         <p>Already have an account? <Link state={location.pathname} className='text-blue-600 underline text-xl' to={'/resister'}> Resister </Link></p>
         <div className="divider">OR</div>
         <GoogleSignIn></GoogleSignIn>
       </div>
