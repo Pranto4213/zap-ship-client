@@ -7,6 +7,9 @@ import Coverage from "../Pages/Coverage";
 import AuthLayout from "../Layout/AuthLayout";
 import PrivetRoute from "./PrivetRoute";
 import Rider from "../Pages/Rider";
+import SendParcel from "../Pages/SendParcel";
+import DashBoardLayout from "../Layout/DashBoardLayout";
+import MyParcels from "../Pages/DashBoard/MyParcels";
 
 
 
@@ -23,7 +26,13 @@ export const router = createBrowserRouter([
         {
             path:'/rider',
             element:<PrivetRoute><Rider></Rider></PrivetRoute>
-        },{
+        },
+        {
+            path:'/send-parcel',
+            element:<PrivetRoute><SendParcel></SendParcel></PrivetRoute>,
+            loader:()=> fetch('/src/JsonFiles/serviceCenter.json').then(res=> res.json())
+        },
+        {
             path:'/coverage',
             Component:Coverage,
             loader:()=> fetch('/src/JsonFiles/serviceCenter.json').then(res=> res.json())
@@ -41,5 +50,15 @@ export const router = createBrowserRouter([
             Component:Resister
         }
     ]
+  },
+  {
+    path: 'dashboard',
+    element:<PrivetRoute><DashBoardLayout></DashBoardLayout>   </PrivetRoute>,
+    children:[
+        {
+            path:'my-parcels',
+            Component:MyParcels
+    }
+]
   }
 ]);

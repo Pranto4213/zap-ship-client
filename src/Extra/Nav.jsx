@@ -7,8 +7,21 @@ const {user, logOut} = UseAuth()
     const links = <>
     <NavLink to={'/'}>Home</NavLink>
     <NavLink to={'/services'}>Services</NavLink>
+    <NavLink to={'/send-parcel'}>Sand Parcel</NavLink>
     <NavLink to={'/coverage'}>Coverage</NavLink>
+
+
+
+    
+      {
+        user && <>
+    <NavLink to={'/dashboard/my-parcels'}>My Parcel</NavLink>
+        
+        </>
+      }
     </>
+
+
 
 
 const handleLogOut =()=>{
@@ -30,7 +43,7 @@ const handleLogOut =()=>{
     
         </div>
  
- 
+ <div className="">
  
  <div className="dropdown  md:hidden">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -52,7 +65,7 @@ const handleLogOut =()=>{
       {links}
     </ul>
   </div>
-  {user?.email}
+ </div>
   <div className="navbar-end md:flex hidden space-x-2">
    {
     user? <button onClick={handleLogOut} className='btn bg-blue-400'>Log Out</button> : <><NavLink className="btn bg-green-500 active:bg-white"  to={'/resister'}>Resister</NavLink>
@@ -62,7 +75,7 @@ const handleLogOut =()=>{
    <Link to={'/rider'} className='btn btn-primary'>
    Be a Rider 
    </Link>
-    {user?.photo}
+   
   </div>
 </div>
     );
